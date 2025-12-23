@@ -1,6 +1,8 @@
 "use client";
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useLayoutEffect } from 'react';
 import { useLanguage } from './LanguageContext';
+
+const useIsomorphicLayoutEffect = typeof window !== 'undefined' ? useLayoutEffect : useEffect;
 
 const Navbar = () => {
     const { t, locale, toggleLanguage } = useLanguage();
@@ -8,7 +10,7 @@ const Navbar = () => {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
     const isRTL = locale === 'ar';
 
-    useEffect(() => {
+    useIsomorphicLayoutEffect(() => {
         const handleScroll = () => {
             setScrolled(window.scrollY > 20);
         };
@@ -38,8 +40,6 @@ const Navbar = () => {
                         src="/logo.jpg"
                         alt="République des Arts"
                         className="logo-img"
-                        height={scrolled ? 55 : 85}
-                        style={{ height: scrolled ? '55px' : '85px', width: 'auto' }}
                     />
                     <div className="brand-text">
                         <span className="brand-name">République</span>
