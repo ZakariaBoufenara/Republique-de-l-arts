@@ -1,5 +1,6 @@
 import "../styles/globals.css";
 import { LanguageProvider } from "../components/LanguageContext";
+import StyledJsxRegistry from "./registry";
 
 export const metadata = {
   title: "République des Arts - École d'Art & Musique",
@@ -16,7 +17,9 @@ export default function RootLayout({ children }) {
       </head>
       <body>
         <LanguageProvider>
-          {children}
+          <StyledJsxRegistry>
+            {children}
+          </StyledJsxRegistry>
         </LanguageProvider>
       </body>
     </html>
