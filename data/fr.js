@@ -68,5 +68,6 @@ export const fr = {
     },
     footer: {
         rights: "© 2025 École d'Art Privée. Tous droits réservés.",
+        description: "Un espace dédié à la créativité et à l'excellence artistique. Rejoignez notre communauté passionnée.",
     }
 };

@@ -62,7 +62,7 @@ const Hero = () => {
 
                 <div className="hero-visual animate-slide-left">
                     <div className="visual-frame">
-                        <div className="visual-image" style={{ backgroundImage: 'url("/images/hero-art.jpg")' }} />
+                        <div className="visual-image" style={{ backgroundImage: 'url("/images/hero_art_new.png")' }} />
                         <div className="visual-overlay" />
                     </div>
                     {/* Floating small creative floating elements could be added here */}
@@ -167,10 +167,14 @@ const Hero = () => {
                 }
 
                 .hero-section.rtl .hero-container {
-                    grid-template-columns: 0.8fr 1.2fr;
+                    /* Unchanged grid columns for RTL to maintain size ratios */
                 }
 
                 /* Content Styles */
+                .hero-content {
+                    text-align: center;
+                }
+
                 .hero-badge {
                     display: inline-flex;
                     align-items: center;
@@ -183,7 +187,8 @@ const Hero = () => {
                     font-weight: 700;
                     font-size: 0.9rem;
                     color: #E9471A;
-                    margin-bottom: 2rem;
+                    color: #E9471A;
+                    margin: 0 auto 2rem auto;
                     box-shadow: 0 4px 15px rgba(0,0,0,0.03);
                 }
 
@@ -196,13 +201,13 @@ const Hero = () => {
                 }
 
                 .hero-title {
-                    font-size: clamp(3rem, 5vw, 4.8rem);
+                    font-size: clamp(2.5rem, 4vw, 3.5rem);
                     font-family: 'Playfair Display', serif;
                     font-weight: 900;
                     color: #2C3E50;
                     line-height: 1.1;
-                    margin-bottom: 1.8rem;
                     letter-spacing: -0.02em;
+                    text-align: center;
                 }
                 
                 .hero-section.rtl .hero-title {
@@ -215,7 +220,8 @@ const Hero = () => {
                     color: #64748B;
                     line-height: 1.7;
                     max-width: 600px;
-                    margin-bottom: 3rem;
+                    max-width: 600px;
+                    margin: 0 auto 3rem auto;
                     font-weight: 500;
                 }
 
@@ -223,6 +229,7 @@ const Hero = () => {
                     display: flex;
                     gap: 1.5rem;
                     margin-bottom: 4rem;
+                    justify-content: center;
                     flex-wrap: wrap;
                 }
 
@@ -266,6 +273,7 @@ const Hero = () => {
                 .hero-stats {
                     display: flex;
                     align-items: center;
+                    justify-content: center;
                     gap: 2.5rem;
                 }
 
@@ -403,6 +411,13 @@ const Hero = () => {
                     .hero-btns { justify-content: center; }
                     .hero-stats { flex-direction: column; gap: 1.5rem; }
                     .stat-divider { display: none; }
+                }
+
+                @media (max-width: 480px) {
+                    .hero-title { font-size: 2.2rem; }
+                    .hero-section { padding-top: 80px; }
+                    .btn-hero-primary, .btn-hero-secondary { padding: 1rem 2rem; width: 100%; text-align: center; }
+                    .hero-btns { gap: 1rem; }
                 }
             `}</style>
         </section>

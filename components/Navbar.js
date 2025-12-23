@@ -132,13 +132,13 @@ const Navbar = () => {
                 }
 
                 .nav-container.rtl {
-                    flex-direction: row-reverse;
+                    /* Keep direction standard to maintain logo on left */
                 }
 
                 .brand {
                     display: flex;
                     align-items: center;
-                    gap: 1.2rem;
+                    gap: 3rem;
                     text-decoration: none;
                 }
 
@@ -340,6 +340,13 @@ const Navbar = () => {
                     .logo-img { height: 60px; }
                     .brand-name { font-size: 1.3rem; }
                     .brand-sub { font-size: 0.8rem; }
+                }
+
+                @media (max-width: 480px) {
+                    .logo-img { height: 45px; }
+                    .brand-name { font-size: 1.1rem; }
+                    .brand-sub { display: none; }
+                    .mobile-link { font-size: 1.5rem; }
                 }
             `}</style>
         </nav>
