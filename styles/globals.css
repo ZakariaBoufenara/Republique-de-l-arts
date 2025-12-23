@@ -1,0 +1,326 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@600;700;800&family=Noto+Sans+Arabic:wght@400;600;700&display=swap');
+
+:root {
+    --primary: #E9471A;
+    /* Deep Artistic Red-Orange */
+    --primary-hover: #C83D16;
+    --secondary: #2C3E50;
+    --bg-soft: #FAF9F6;
+    /* Off-white */
+    --bg-beige: #F5F5DC;
+    --text-dark: #1E293B;
+    --text-muted: #64748B;
+    --white: #ffffff;
+    --shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    --radius: 12px;
+    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+[dir="rtl"] {
+    font-family: 'Noto Sans Arabic', sans-serif;
+}
+
+[dir="ltr"] {
+    font-family: 'Inter', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--bg-soft);
+    color: var(--text-dark);
+    line-height: 1.6;
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'Outfit', sans-serif;
+    color: var(--secondary);
+    font-weight: 700;
+    line-height: 1.1;
+}
+
+h2 {
+    font-size: 3rem !important;
+    color: var(--primary);
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: var(--transition);
+}
+
+ul {
+    list-style: none;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.btn {
+    padding: 0.8rem 2rem;
+    border-radius: var(--radius);
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    transition: var(--transition);
+    display: inline-block;
+}
+
+.btn-primary {
+    background-color: var(--primary);
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 15px -3px rgba(233, 71, 26, 0.3);
+}
+
+section {
+    padding: 80px 0;
+}
+
+/* Glassmorphism Classes */
+.glass {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+input:focus,
+select:focus {
+    outline: none;
+    border-color: var(--primary) !important;
+    box-shadow: 0 0 0 3px rgba(233, 71, 26, 0.1);
+    background-color: white !important;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes subtleBounce {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+@keyframes slowRotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.animate-on-scroll {
+    opacity: 0;
+    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.animate-on-scroll.is-visible {
+    opacity: 1;
+    transform: none !important;
+}
+
+.hover-lift {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-lift:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(233, 71, 26, 0.1) !important;
+}
+
+.bg-animate-shape {
+    animation: slowRotate 20s linear infinite;
+}
+
+.vision-card {
+    background-image:
+        linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)),
+        url('/images/vision-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    color: var(--text-dark) !important;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.vision-card h3 {
+    color: var(--primary) !important;
+    font-weight: 800;
+}
+
+.vision-card p {
+    color: var(--text-dark) !important;
+    font-weight: 600;
+}
+
+.vision-card:hover {
+    transform: scale(1.05) !important;
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.12) !important;
+}
+
+.approach-card {
+    background-image:
+        linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)),
+        url('/images/approach-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.approach-card h3 {
+    color: var(--primary) !important;
+    font-weight: 800;
+}
+
+.approach-card p {
+    color: var(--text-dark) !important;
+    font-weight: 600;
+}
+
+.approach-card:hover {
+    transform: scale(1.05) !important;
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.12) !important;
+    z-index: 10;
+}
+
+.music-discipline-card {
+    background-image:
+        linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)),
+        url('/images/music-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    border: none !important;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.music-discipline-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 20px 45px rgba(233, 71, 26, 0.15) !important;
+}
+
+.music-discipline-card h3 {
+    font-weight: 800;
+}
+
+.music-discipline-card p {
+    font-weight: 600;
+    color: var(--text-dark) !important;
+}
+
+.drawing-discipline-card {
+    background-image:
+        linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)),
+        url('/images/drawing-bg.webp');
+    background-size: cover;
+    background-position: center;
+    border: none !important;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.drawing-discipline-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 20px 45px rgba(233, 71, 26, 0.15) !important;
+}
+
+.drawing-discipline-card h3 {
+    font-weight: 800;
+}
+
+.drawing-discipline-card p {
+    font-weight: 600;
+    color: var(--text-dark) !important;
+}
+
+.workshops-discipline-card {
+    background-image:
+        linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)),
+        url('/images/workshops-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    border: none !important;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.workshops-discipline-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 20px 45px rgba(233, 71, 26, 0.15) !important;
+}
+
+.workshops-discipline-card h3 {
+    font-weight: 800;
+}
+
+.workshops-discipline-card p {
+    font-weight: 600;
+    color: var(--text-dark) !important;
+}
+
+@media (max-width: 768px) {
+    section {
+        padding: 60px 0;
+    }
+}
