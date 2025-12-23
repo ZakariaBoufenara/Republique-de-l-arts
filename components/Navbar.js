@@ -34,6 +34,8 @@ const Navbar = () => {
                         src="/logo.jpg"
                         alt="République des Arts"
                         className="logo-img"
+                        height="85"
+                        style={{ height: '85px', width: 'auto' }}
                     />
                     <div className="brand-text">
                         <span className="brand-name">République</span>

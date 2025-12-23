@@ -979,7 +979,7 @@ export const ContactUs = () => {
                                 <div className="icon">📍</div>
                                 <div>
                                     <h4>{isRTL ? 'العنوان' : 'Adresse'}</h4>
-                                    <p>123 Avenue des Artistes, Ville des Arts</p>
+                                    <p>Citée les orangés Rouiba , Alger</p>
                                 </div>
                             </div>
 
