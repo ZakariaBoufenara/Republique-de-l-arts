@@ -21,7 +21,7 @@ const Hero = () => {
                 <div className="hero-content">
                     <div className="hero-badge animate-fade-in">
                         <span className="badge-dot" />
-                        {locale === 'fr' ? 'Bienvenue à la République des Arts' : 'مرحباً بكم في الجمهورية للفنون'}
+                        {locale === 'fr' ? 'Bienvenue à la République des Arts' : 'مرحبا بكم في la République des Arts'}
                     </div>
 
                     <h1 className="hero-title animate-slide-up">
