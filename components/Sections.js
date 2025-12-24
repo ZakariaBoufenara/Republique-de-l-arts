@@ -842,7 +842,7 @@ export const Audiences = () => {
                     backgroundPosition: 'center',
                     transition: 'opacity 1.5s ease-in-out',
                     opacity: current === idx ? 1 : 0,
-                    zIndex: -2
+                    zIndex: 0
                 }} />
             ))}
 
@@ -854,10 +854,10 @@ export const Audiences = () => {
                 width: '100%',
                 height: '100%',
                 backgroundColor: 'rgba(0, 0, 0, 0.65)',
-                zIndex: -1
+                zIndex: 1
             }} />
 
-            <div className="container" style={{ textAlign: 'center', position: 'relative', zIndex: 1 }}>
+            <div className="container" style={{ textAlign: 'center', position: 'relative', zIndex: 2 }}>
                 <h2 style={{
                     color: '#FFFFFF',
                     fontSize: '3.5rem',
